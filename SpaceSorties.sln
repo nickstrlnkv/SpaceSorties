@@ -5,6 +5,10 @@ VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceSorties.UI", "SpaceSorties.UI\SpaceSorties.UI.csproj", "{FE3C907E-FB80-4DB1-8956-9208610D472A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceSorties.CLI", "SpaceSorties.CLI\SpaceSorties.CLI.csproj", "{82C74C0C-AB3D-43A7-AE57-E68D98E71760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceSorties.Core", "SpaceSorties.Core\SpaceSorties.Core.csproj", "{6A181C0F-DC64-4A36-BE4A-776769A5CB43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FE3C907E-FB80-4DB1-8956-9208610D472A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE3C907E-FB80-4DB1-8956-9208610D472A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE3C907E-FB80-4DB1-8956-9208610D472A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82C74C0C-AB3D-43A7-AE57-E68D98E71760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82C74C0C-AB3D-43A7-AE57-E68D98E71760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82C74C0C-AB3D-43A7-AE57-E68D98E71760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82C74C0C-AB3D-43A7-AE57-E68D98E71760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A181C0F-DC64-4A36-BE4A-776769A5CB43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A181C0F-DC64-4A36-BE4A-776769A5CB43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A181C0F-DC64-4A36-BE4A-776769A5CB43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A181C0F-DC64-4A36-BE4A-776769A5CB43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

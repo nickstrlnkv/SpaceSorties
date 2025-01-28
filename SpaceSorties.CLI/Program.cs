@@ -1,10 +1,14 @@
-﻿namespace SpaceSorties.CLI
+﻿using SpaceSorties.Core;
+
+namespace SpaceSorties.CLI
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            SpaceSortiesTools spaceSortiesTools = new SpaceSortiesTools();
+
+            spaceSortiesTools.PrintAvailableDrives();
         }
     }
 }

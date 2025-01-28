@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceSorties.Core\SpaceSorties.Core.csproj" />
+  </ItemGroup>
+
 </Project>
