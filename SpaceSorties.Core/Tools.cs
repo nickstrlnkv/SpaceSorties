@@ -5,18 +5,23 @@
     /// </summary>
     public class Tools
     {
-        private DriveInfo[] allDrives;
+        
+        private DriveInfo[] _allDrives;
+
+        /// <summary>
+        /// Массив дисков на компьютере
+        /// </summary>
         public DriveInfo[] AllDrives
         {
             get
             {
-                return allDrives;
+                return _allDrives;
             }
         }
 
         public Tools()
         {
-            allDrives = DriveInfo.GetDrives();
+            _allDrives = DriveInfo.GetDrives();
         }
 
         /// <summary>
@@ -24,7 +29,7 @@
         /// </summary>
         public void PrintAvailableDrives()
         {
-            foreach (DriveInfo drive in allDrives)
+            foreach (DriveInfo drive in _allDrives)
             {
                 Console.WriteLine($"Drive: {drive.Name}");
             }

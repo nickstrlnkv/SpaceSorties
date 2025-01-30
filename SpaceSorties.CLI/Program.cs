@@ -6,6 +6,14 @@ namespace SpaceSorties.CLI
     {
         static void Main(string[] args)
         {
+            SpaceSorties.Core.Folder folder = new Folder("Name", 55559);
+            Console.WriteLine(folder.Name);
+            Console.WriteLine(folder.Size);
+
+        }
+
+        static void Trash()
+        {
             /*
             Tools spaceSortiesTools = new Tools();
 
@@ -31,7 +39,6 @@ namespace SpaceSorties.CLI
             Console.WriteLine(diskE.Name);
             Console.WriteLine(Tools.FormatSize(Tools.GetDiskSize(diskE.Name)));
             Console.WriteLine(Tools.FormatSize(Tools.GetDirectorySizeNoEnumerate(diskE.Name)));
-
         }
     }
 }
