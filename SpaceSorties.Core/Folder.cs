@@ -32,5 +32,23 @@
             this._name = name;
             this._size = size;
         }
+
+        /// <summary>
+        /// Получить размер файла, директории в привычном виде, например '5.00MB', '22.05 GB'.
+        /// </summary>
+        /// <returns>Возвращает размер в отформатированом виде.</returns>
+        public string GetFormatSize()
+        {
+            if (Size >= 1024 * 1024 * 1024)
+                return $"{Size / (1024.0 * 1024 * 1024):F2} GB";
+
+            else if (Size >= 1024 * 1024)
+                return $"{Size / (1024.0 * 1024):F2} MB";
+
+            else if (Size >= 1024)
+                return $"{Size / 1024.0:F2} KB";
+            else
+                return $"{Size} bytes";
+        }
     }
 }

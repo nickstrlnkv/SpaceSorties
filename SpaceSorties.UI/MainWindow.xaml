@@ -15,26 +15,24 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <GroupBox Header="Выберите диск" Padding="5" Height="55" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0">
-            <ComboBox x:Name="diskComboBox" Width="150" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" >
-                <ListBoxItem Content="C:\\"/>
-                <ListBoxItem Content="D:\\"/>
-                <ListBoxItem Content="E:\\"/>
+            <ComboBox x:Name="disksComboBox" Width="150" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                
             </ComboBox>
         </GroupBox>
         <GroupBox Header="Выберите действие" Padding="5" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" Margin="0,70,0,0">
             <StackPanel>
-                <RadioButton IsChecked="True" Margin="3">Сканировать выбраный диск</RadioButton>
-                <RadioButton Margin="3">Сканировать все диски</RadioButton>
+                <RadioButton x:Name="scanAllDisk" IsChecked="True" Margin="3">Сканировать выбраный диск</RadioButton>
+                <RadioButton x:Name="scanSelectedDisk" Margin="3">Сканировать все диски</RadioButton>
             </StackPanel>
         </GroupBox>
         <GroupBox Header="Запуск" Padding="5" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" Margin="0,160,0,0">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Button Margin="3">Сканировать</Button>
-                <Button Margin="3" Content="Предыдущий результат"/>
+                <Button x:Name="scanButton" Margin="3">Сканировать</Button>
+                <Button x:Name="previousResultButton" Margin="3" Content="Предыдущий результат"/>
             </StackPanel>
         </GroupBox>
-        <ProgressBar Minimum="0" Maximum="100" Value="50" Height="25" Grid.Column="0" VerticalAlignment="Bottom" Margin="20,22,20,20"/>
-        <TreeView Grid.Column="2">
+        <ProgressBar x:Name="scanningProgressBar" Minimum="0" Maximum="100" Value="50" Height="25" Grid.Column="0" VerticalAlignment="Bottom" Margin="20,22,20,20"/>
+        <TreeView Grid.Column="2" x:Name="Tree">
             <TreeViewItem Header="C:\\">
                 <TreeViewItem Header="system32"/>
                 <TreeViewItem Header="Program Files"/>

@@ -19,6 +19,9 @@
             }
         }
 
+        /// <summary>
+        /// Инициализируем объект инструментов с доступными дисками
+        /// </summary>
         public Tools()
         {
             _allDrives = DriveInfo.GetDrives();
