@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpaceSorties.UI"
         mc:Ignorable="d"
-        Title="SpaceSorties" Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="/icon.png">
-    <Grid x:Name="grid1">
-        <Button x:Name="button1" Width="100" Height="30" Content="Кнопка"/>
+        Title="SpaceSorties" Height="600" Width="800" WindowStartupLocation="CenterScreen" Icon="/icon.png">
+    <Grid x:Name="layoutGrid" ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Выберите диск" Padding="5" Height="55" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0">
+            <ComboBox x:Name="diskComboBox" Width="150" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <ListBoxItem Content="C:\\"/>
+                <ListBoxItem Content="D:\\"/>
+                <ListBoxItem Content="E:\\"/>
+            </ComboBox>
+        </GroupBox>
+        <GroupBox Header="Выберите действие" Padding="5" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" Margin="0,70,0,0">
+            <StackPanel>
+                <RadioButton IsChecked="True" Margin="3">Сканировать выбраный диск</RadioButton>
+                <RadioButton Margin="3">Сканировать все диски</RadioButton>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Запуск" Padding="5" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" Margin="0,160,0,0">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button Margin="3">Сканировать</Button>
+                <Button Margin="3" Content="Предыдущий результат"/>
+            </StackPanel>
+        </GroupBox>
+        <ProgressBar Minimum="0" Maximum="100" Value="50" Height="25" Grid.Column="0" VerticalAlignment="Bottom" Margin="20,22,20,20"/>
+        <TreeView Grid.Column="2">
+            <TreeViewItem Header="C:\\">
+                <TreeViewItem Header="system32"/>
+                <TreeViewItem Header="Program Files"/>
+                <TreeViewItem Header="Games"/>
+            </TreeViewItem>
+            <TreeViewItem Header="D:\\">
+                <TreeViewItem Header="Курсы"/>
+                <TreeViewItem Header="Steam"/>
+                <TreeViewItem Header="Видео"/>
+            </TreeViewItem>
+            <TreeViewItem Header="E:\\">
+                <TreeViewItem Header="Unity"/>
+                <TreeViewItem Header="UnityHub"/>
+                <TreeViewItem Header="Projects"/>
+            </TreeViewItem>
+        </TreeView>
     </Grid>
 </Window>

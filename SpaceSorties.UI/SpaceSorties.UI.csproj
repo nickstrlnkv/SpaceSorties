@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SpaceSorties.Core\SpaceSorties.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="icon.png" />
   </ItemGroup>
 

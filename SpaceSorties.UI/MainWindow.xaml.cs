@@ -20,5 +20,6 @@ namespace SpaceSorties.UI
         {
             InitializeComponent();
         }
+
     }
 }
