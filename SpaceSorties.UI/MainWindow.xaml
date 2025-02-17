@@ -1,4 +1,4 @@
-﻿<Window x:Class="SpaceSorties.UI.MainWindow"
+﻿<Window x:Name="SpaceSortiesWindow" x:Class="SpaceSorties.UI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SpaceSorties.UI"
         mc:Ignorable="d"
         Title="SpaceSorties" Height="600" Width="800" WindowStartupLocation="CenterScreen" Icon="/icon.png">
-    <Grid x:Name="layoutGrid" ShowGridLines="True">
+    <Grid x:Name="layoutGrid" ShowGridLines="False">
         <Grid.RowDefinitions>
             <RowDefinition />
         </Grid.RowDefinitions>
@@ -21,32 +21,31 @@
         </GroupBox>
         <GroupBox Header="Выберите действие" Padding="5" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" Margin="0,70,0,0">
             <StackPanel>
-                <RadioButton x:Name="scanAllDisk" IsChecked="True" Margin="3">Сканировать выбраный диск</RadioButton>
-                <RadioButton x:Name="scanSelectedDisk" Margin="3">Сканировать все диски</RadioButton>
+                <RadioButton x:Name="scanAllDisk" Checked="scanAllDisk_Checked" Margin="3">Сканировать все диски</RadioButton>
+                <RadioButton x:Name="scanSelectedDisk" Checked="scanSelectedDisk_Checked" Margin="3">Сканировать выбранный диск</RadioButton>
             </StackPanel>
         </GroupBox>
         <GroupBox Header="Запуск" Padding="5" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" Margin="0,160,0,0">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Button x:Name="scanButton" Margin="3">Сканировать</Button>
+                <Button x:Name="scanButton" Click="scanButton_Click" Margin="3">Сканировать</Button>
                 <Button x:Name="previousResultButton" Margin="3" Content="Предыдущий результат"/>
             </StackPanel>
         </GroupBox>
-        <ProgressBar x:Name="scanningProgressBar" Minimum="0" Maximum="100" Value="50" Height="25" Grid.Column="0" VerticalAlignment="Bottom" Margin="20,22,20,20"/>
         <TreeView Grid.Column="2" x:Name="Tree">
-            <TreeViewItem Header="C:\\">
-                <TreeViewItem Header="system32"/>
-                <TreeViewItem Header="Program Files"/>
-                <TreeViewItem Header="Games"/>
+            <TreeViewItem Header="C:\\ - 450 GB">
+                <TreeViewItem Header="system32 - 230 GB"/>
+                <TreeViewItem Header="Program Files - 100 GB"/>
+                <TreeViewItem Header="Games - 45"/>
             </TreeViewItem>
-            <TreeViewItem Header="D:\\">
-                <TreeViewItem Header="Курсы"/>
-                <TreeViewItem Header="Steam"/>
-                <TreeViewItem Header="Видео"/>
+            <TreeViewItem Header="D:\\ - 1000 GB">
+                <TreeViewItem Header="Курсы - 700 GB"/>
+                <TreeViewItem Header="Steam - 250 GB"/>
+                <TreeViewItem Header="Видео - 50"/>
             </TreeViewItem>
-            <TreeViewItem Header="E:\\">
-                <TreeViewItem Header="Unity"/>
-                <TreeViewItem Header="UnityHub"/>
-                <TreeViewItem Header="Projects"/>
+            <TreeViewItem Header="E:\\ - 256 GB">
+                <TreeViewItem Header="Unity - 56 GB"/>
+                <TreeViewItem Header="UnityHub - 100 GB"/>
+                <TreeViewItem Header="Projects - 100 GB"/>
             </TreeViewItem>
         </TreeView>
     </Grid>
